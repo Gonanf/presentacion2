@@ -1,9 +1,9 @@
 {
   "version": 0,
   "shared": {
-    "background": null,
+    "background": "rgb(0,0,0)",
     "range": [
-      0,
+      1.9666656666666666,
       null
     ],
     "size": {

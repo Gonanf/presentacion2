@@ -7,4 +7,9 @@ export default defineConfig({
     motionCanvas(),
     ffmpeg(),
   ],
+  server:{
+  host: "192.168.1.45",
+  allowedHosts: true,
+  port: 25565,
+  }
 });
