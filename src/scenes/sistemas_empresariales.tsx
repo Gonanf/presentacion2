@@ -14,12 +14,17 @@ export default  makeScene2D(function* (view) {
   
   yield* slideTransition(Direction.Left);
   
-  //SOA
+  const sistemas = <Txt opacity={0} fill={"white"} fontSize={150}>Sistemas empresariales</Txt>
+  view.add(sistemas);
+  yield* all(sistemas.opacity(1,1),sistemas.position([0,-400],1));
+  const ar = <Line points={[[0,-325],[0,0]]} end={0} endArrow stroke={"white"} lineWidth={5} />;
+  view.add(ar);
+  yield* ar.end(1,1);
   const SOA = createRef<Txt>();
-  view.add(<Txt ref={SOA} opacity={0} fill={"white"}>SOA</Txt>);
+  view.add(<Txt ref={SOA} opacity={0} fill={"white"} position={[0,50]}>SOA</Txt>);
   yield* SOA().opacity(1,1);
   yield* beginSlide("Introduccion");
-yield* SOA().opacity(0,1);
+yield* all(SOA().opacity(0,1),sistemas.opacity(0,1),ar.opacity(0,1));
   const levels = createRefArray<Path>();
   const piramid = createRef<Camera>();
   view.add(<Camera ref={piramid}>
