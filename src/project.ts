@@ -9,6 +9,9 @@ import agentesInteligentes from "./scenes/agentes_inteligentes?scene";
 import codigoAbierto from "./scenes/codigo_abierto?scene";
 import codigoAbiertoP2 from "./scenes/codigo_abierto_p2?scene";
 import codigoAbiertoP3 from "./scenes/codigo_abierto_p3?scene";
+import analisisYdiseño from "./scenes/analisis_y_diseño?scene";
+import analisisYdiseñoP2 from "./scenes/analisis_y_diseño_p2?scene";
+import analisisYdiseñoP3 from "./scenes/analisis_y_diseño_p3?scene";
 
 export default makeProject({
   scenes: [
@@ -21,5 +24,8 @@ export default makeProject({
     codigoAbierto,
     codigoAbiertoP2,
     codigoAbiertoP3,
+    analisisYdiseño,
+    analisisYdiseñoP2,
+    analisisYdiseñoP3,
   ],
 });
